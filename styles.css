@@ -1,0 +1,142 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:gainsboro;
+    background-image: -webkit-gradient();
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease; /* Smooth transition for background change */
+    margin: 0;
+}
+
+/* Main container for the weather app */
+.weather-app {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    text-align: center;
+}
+
+/* Title styles */
+h1 {
+    font-size: 2.5em; /* Increased font size for the title */
+    margin-bottom: 20px;
+    color: #2c3e50; /* Darker color for contrast */
+}
+
+/* Search container styles */
+.search-container {
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border-radius: 25px; /* More rounded input field */
+    border: 1px solid #3498db; /* Border color */
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease; /* Smooth border transition */
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9; /* Border color on focus */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px; /* Adjusted padding for better size */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Current weather section styles */
+#current-weather {
+    margin-top: 20px;
+}
+
+.current-info p {
+    margin: 10px 0;
+}
+
+/* Forecast container styles */
+#forecast-container {
+    margin-top: 30px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Increased gap for spacing */
+}
+
+.forecast-day {
+    padding: 15px;
+    border-radius: 15px; /* Rounded corners */
+    background-color: #eaeaea; /* Light gray background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+    color: #333;
+    transition: transform 0.2s; /* Scale effect */
+}
+
+.forecast-day:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Background styles based on weather conditions */
+.rainy {
+    background-image: url('images/rainy.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.snowy {
+    background-image: url('images/snowy.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.sunny {
+    background-image: url('images/sunny.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Default background if no condition matches */
+.default {
+    background-image: url('images/default.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .forecast-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    input[type="text"], button {
+        width: 100%; /* Full width for inputs and buttons */
+    }
+}
